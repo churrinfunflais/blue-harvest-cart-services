@@ -1,0 +1,14 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "always",
+        "source.fixAll.prettier": "always",
+        "source.fixAll.ts": "always",
+        "source.organizeImports": "always",
+        "source.removeUnusedImports": "always",
+        "source.sort.json": "always",
+        "source.sort.properties": "always",
+        "source.sort.ts": "always",
+        "source.sortImports": "always"
+    },
+    "editor.formatOnSave": true
+}

@@ -1,0 +1,19 @@
+// .vscode/launch.json
+{
+    "configurations": [
+        {
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "internalConsoleOptions": "neverOpen",
+            "name": "Nodemon TS with Memcached",
+            "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+            "request": "launch",
+            "restart": true,
+            "runtimeExecutable": "nodemon",
+            "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"],
+            "sourceMaps": true,
+            "type": "node"
+        }
+    ],
+    "version": "0.2.0"
+}

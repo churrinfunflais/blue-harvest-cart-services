@@ -5,7 +5,7 @@ import helmet from 'helmet';
 
 import { CORS_ORIGIN, PORT } from './config.js';
 import { API } from './constants/routes.const.js';
-import { errorHandler } from './middlewares/utils/error.mdw.js';
+import { errorHandler } from './middlewares/utils/errorHandler.mdw.js';
 import { mainRouter } from './routers/main.router.js';
 
 export const app = express();

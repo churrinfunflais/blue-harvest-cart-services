@@ -1,8 +1,10 @@
 import { JTDDataType } from 'ajv/dist/core.js';
 
+import { CLIENT } from '../constants/strings.const.js';
 import { OBJECT, STRING } from '../constants/types.const.js';
 
 export const clientSchema = {
+    $id: CLIENT,
     properties: {
         email: { type: STRING },
         firstName: { type: STRING },

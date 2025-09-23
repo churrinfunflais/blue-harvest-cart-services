@@ -4,7 +4,7 @@ import express from 'express';
 import helmet from 'helmet';
 
 import { CORS_ORIGIN, PORT } from './config.js';
-import { API } from './constants/routes.const.js';
+import { API_V1 } from './constants/routes.const.js';
 import { errorHandler } from './middlewares/utils/errorHandler.mdw.js';
 import { mainRouter } from './routers/main.router.js';
 
@@ -16,7 +16,7 @@ app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(API, mainRouter);
+app.use(API_V1, mainRouter);
 
 app.use(errorHandler);
 

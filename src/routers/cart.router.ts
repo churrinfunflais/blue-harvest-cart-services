@@ -1,9 +1,13 @@
 import { Router } from 'express';
 
+import { CART_ID, CART_ID_CLIENT, CART_ID_DELIVERY, CART_ID_ITEMS, CART_ID_PAYMENTS } from '../constants/routes.const.js';
 import { getCart } from '../middlewares/cart/getCart.mdw.js';
 import { response } from '../middlewares/utils/response.mdw.js';
 import { validateSchema } from '../middlewares/utils/validateSchema.mdw.js';
 import { cartSchema } from '../schemas/cart.schema.js';
+import { cartClientRouter } from './cartClient.router.js';
+import { cartItemsRouter } from './cartItems.router.js';
+import { cartPaymentsRouter } from './cartPayment.router.js';
 
 export const cartRouter = Router({
     caseSensitive: true,
@@ -11,8 +15,9 @@ export const cartRouter = Router({
     strict: true,
 });
 
-cartRouter.get('/cart/:cartId', validateSchema(cartSchema), getCart, response);
-// cartRouter.get('/cart/:cartId/client');
-// cartRouter.get('/cart/:cartId/items');
-// cartRouter.get('/cart/:cartId/shipping');
-// cartRouter.get('/cart/:cartId/payment');
+cartRouter.use(CART_ID_CLIENT, cartClientRouter);
+cartRouter.use(CART_ID_ITEMS, cartItemsRouter);
+cartRouter.use(CART_ID_PAYMENTS, cartPaymentsRouter);
+cartRouter.use(CART_ID_DELIVERY, cartPaymentsRouter);
+
+cartRouter.get(CART_ID, validateSchema(cartSchema), getCart, response);

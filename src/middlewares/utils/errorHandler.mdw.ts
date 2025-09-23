@@ -2,7 +2,7 @@ import { ErrorRequestHandler } from 'express';
 
 import { iError } from '../../types/iError.js';
 
-export const errorHandler: ErrorRequestHandler = (err: iError, _req, res, _next) => {
+export const errorHandler: ErrorRequestHandler = (err: iError, _req, res, next) => {
     res.status(err.statusCode || 500);
 
     const errorObject = {
@@ -13,4 +13,5 @@ export const errorHandler: ErrorRequestHandler = (err: iError, _req, res, _next)
     };
 
     res.send(errorObject);
+    next();
 };

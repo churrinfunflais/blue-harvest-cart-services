@@ -1,5 +1,6 @@
 import { Router } from 'express';
 
+import { CART } from '../constants/routes.const.js';
 import { cartRouter } from './cart.router.js';
 
 export const mainRouter = Router({
@@ -8,4 +9,4 @@ export const mainRouter = Router({
     strict: true,
 });
 
-mainRouter.use(cartRouter);
+mainRouter.use(CART, cartRouter);

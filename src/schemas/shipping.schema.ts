@@ -1,8 +1,10 @@
 import { JTDDataType } from 'ajv/dist/core.js';
 
+import { ADDRESS, DELIVERY, SCHEDULE, STORE } from '../constants/strings.const.js';
 import { DATE_TIME, NUMBER, OBJECT, STRING } from '../constants/types.const.js';
 
 export const addressSchema = {
+    $id: ADDRESS,
     properties: {
         city: { nullable: true, type: STRING },
         country: { nullable: true, type: STRING },
@@ -24,6 +26,7 @@ export const addressSchema = {
 } as const;
 
 export const storeSchema = {
+    $id: STORE,
     properties: {
         address: addressSchema,
         id: { type: STRING },
@@ -33,6 +36,7 @@ export const storeSchema = {
 } as const;
 
 export const scheduleSchema = {
+    $id: SCHEDULE,
     properties: {
         from: { format: DATE_TIME, type: STRING },
         to: { format: DATE_TIME, type: STRING },
@@ -41,6 +45,7 @@ export const scheduleSchema = {
 } as const;
 
 export const deliverySchema = {
+    $id: DELIVERY,
     properties: {
         address: addressSchema,
         schedule: scheduleSchema,

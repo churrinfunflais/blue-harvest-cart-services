@@ -1,1 +1,12 @@
-export const API = '/api';
+export const ROOT = '/';
+export const API_V1 = '/api/v1';
+export const CART = '/cart';
+export const CART_ID = '/:cartId';
+export const CART_ID_CLIENT = '/:cartId/client';
+export const CART_ID_ITEMS = '/:cartId/items';
+export const CART_ID_PAYMENTS = '/:cartId/payments';
+export const CART_ID_DELIVERY = '/:cartId/delivery';
+export const CLIENT = '/client';
+export const ITEMS = '/items';
+export const SHIPPING = '/shipping';
+export const PAYMENT = '/payment';

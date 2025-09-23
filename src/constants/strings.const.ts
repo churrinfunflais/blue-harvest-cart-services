@@ -1,1 +1,11 @@
 export const CART = 'cart';
+export const ITEM = 'item';
+export const CLIENT = 'client';
+export const SHIPPING = 'shipping';
+export const PAYMENT = 'payment';
+export const ADDRESS = 'address';
+export const STORE = 'store';
+export const SCHEDULE = 'schedule';
+export const DELIVERY = 'delivery';
+export const DISCOUNT = 'discount';
+export const DEFAULT_FIELDS = 'defaultFields';

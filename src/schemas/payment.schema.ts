@@ -1,5 +1,6 @@
 import { JTDDataType } from 'ajv/dist/core.js';
 
+import { PAYMENT } from '../constants/strings.const.js';
 import {
     AMEX,
     CASH,
@@ -18,6 +19,7 @@ import {
 } from '../constants/types.const.js';
 
 export const paymentSchema = {
+    $id: PAYMENT,
     discriminator: { propertyName: TYPE },
     oneOf: [
         {

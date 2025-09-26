@@ -1,8 +1,10 @@
 {
-    "author": "cart-services",
+    "author": "heb-cart-services",
     "dependencies": {
         "ajv": "^8.17.1",
         "ajv-formats": "^3.0.1",
+        "amazon-dax-client": "^1.2.10",
+        "aws-sdk": "^2.1692.0",
         "axios": "^1.12.2",
         "compression": "^1.8.1",
         "cors": "^2.8.5",
@@ -14,10 +16,11 @@
         "node-cache": "^5.1.2",
         "npm": "^11.6.0"
     },
-    "description": "cart-services",
+    "description": "heb-cart-services",
     "devDependencies": {
         "@eslint/js": "^9.36.0",
         "@tsconfig/node22": "^22.0.2",
+        "@types/amazon-dax-client": "^1.2.9",
         "@types/compression": "^1.8.1",
         "@types/cors": "^2.8.19",
         "@types/express": "^5.0.3",
@@ -44,7 +47,7 @@
     ],
     "license": "ISC",
     "main": "dist/index.js",
-    "name": "cart-services",
+    "name": "heb-cart-services",
     "scripts": {
         "build": "tsc",
         "dev": "nodemon",

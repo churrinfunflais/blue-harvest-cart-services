@@ -1,5 +1,6 @@
 export const CART = 'cart';
 export const ITEM = 'item';
+export const ITEMS = 'items';
 export const CLIENT = 'client';
 export const SHIPPING = 'shipping';
 export const PAYMENT = 'payment';
